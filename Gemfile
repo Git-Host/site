@@ -7,7 +7,7 @@ gem 'httparty'
 gem 'pry'
 gem 'rails_12factor'
 gem 'dalli'
-
+gem 'Rails', '2.0.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
