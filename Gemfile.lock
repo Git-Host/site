@@ -145,7 +145,7 @@ GEM
       json (>= 1.8.0)
 
 PLATFORMS
-  ruby
+  ruby '2.0.0'
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
