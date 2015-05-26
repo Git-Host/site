@@ -1,0 +1,3 @@
+db_key: 'b4lzo1swsk485a3'
+db_secret: '9ovfx0kyoc9bida'
+db_callback: 'http://localhost:3000/auth/dropbox/callback'
