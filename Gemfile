@@ -7,11 +7,19 @@ gem 'httparty'
 gem 'pry'
 gem 'rails_12factor'
 gem 'dalli'
-
+gem 'rake', '~> 0.9.6'
+group :development, :test do
+  gem 'sqlite3'
+  gem 'minitest'
+  gem 'thor'
+end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
-
+# Add support for the MySQL
+group :production, :mysql do
+  gem 'mysql2'
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 gem 'pg'
