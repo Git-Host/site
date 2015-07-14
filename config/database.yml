@@ -1,25 +1,32 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
-default: &default
+test:
   adapter: postgresql
+  encoding: utf8
+  reconnect: false
   pool: 5
-  timeout: 5000
+  database: railspg_test
+  username: <%=ENV['PGUSER']%>
+  password: <%=ENV['PGPASSWORD']%>
+  host:     localhost
+  port:     <%=ENV['PGPORT']%>
 
 development:
-  <<: *default
-  database: updog_development
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: updog_test
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  database: railspg_development
+  username: <%=ENV['PGUSER']%>
+  password: <%=ENV['PGPASSWORD']%>
+  host:     localhost
+  port:     <%=ENV['PGPORT']%>
 
 production:
-  <<: *default
-  database: updog_production
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
+  username: <%=ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD']%>
+  host:     <%=ENV['OPENSHIFT_POSTGRESQL_DB_HOST']%>
+  port:     <%=ENV['OPENSHIFT_POSTGRESQL_DB_PORT']%>
