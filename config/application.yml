@@ -1,3 +1,3 @@
-db_key: 'b4lzo1swsk485a3'
-db_secret: '9ovfx0kyoc9bida'
-db_callback: 'http://localhost:3000/auth/dropbox/callback'
+db_key: 'tpv2lzsxnc6psc1'
+db_secret: '4ghjyqjc0l8f885'
+db_callback: 'https://nnn-nnnnn.rhcloud.com/auth/dropbox/callback'
